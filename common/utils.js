@@ -26,7 +26,7 @@ function createURL2(url,obj){
       props += "&" + p + "=" + params[p];
   }
   resultURL = url + "?" + props.substr(1);
-  console.log(resultURL);
+  console.log(resultURL);//控制台输出重构后的URL
   return resultURL; 
 }
 

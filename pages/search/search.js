@@ -3,10 +3,10 @@ const util = require('../../common/utils.js');
 Page({
   data: {  //状态机数据
     inputValue: "", //输入的内容
-    loading: false, //加载状态
+    loading: false, //按钮加载状态
     disabled: true, //按钮是否可用
-    modalHidden: true, //modal弹出状态
-    modalErrorText: "请求失败,请检测网络"//modal弹出提示文字
+    modalHidden: true, //模态框弹出状态
+    modalErrorText: ""//modal弹出提示文字
   },
   //输入框绑定的事件
   bindKeyInput: function (e) {
@@ -48,7 +48,6 @@ Page({
             modalHidden: false,
             modalErrorText: '查询失败：' + res.data.desc
           });
-          console.log(new Date());
         }
 
       },
@@ -62,7 +61,7 @@ Page({
       },
       //无论成功与失败,loading都取消
       complete: function () {
-        console.log("complete")
+        console.log("接口请求完成")
         that.setData({
           loading: false,
           disabled: false

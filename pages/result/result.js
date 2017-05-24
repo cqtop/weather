@@ -6,12 +6,12 @@ Page({
     modalHidden: true, //modal弹出状态
   },
   onLoad: function (options) {
-    console.log("result");
+    console.log("加载查询结果页面");
     // 页面初始化 options为页面跳转所带来的参数
     console.log(options);
     this.setData(options);
     this.setData({
-      date: util.getDate(),//显示查询时间
+      date: util.getDate(),//获取查询时间
     });
 
   },
